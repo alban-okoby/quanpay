@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>QuantechPay</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon" /> -->
+
+  <link href="assets/css/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Page specific CSS end -->
+    <!-- Font Family -->
+    <link href="https://fonts.cdnfonts.com/css/anek-bangla" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/inter/inter.css" id="main-font-link" />
+
+    <!-- Tabler Icons https://tablericons.com -->
+    <link rel="stylesheet" href="assets/fonts/tabler-icons.min.css" />
+    <!-- Feather Icons https://feathericons.com -->
+    <link rel="stylesheet" href="assets/fonts/feather.css" />
+    <!-- Font Awesome Icons] https://fontawesome.com/icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome.css" />
+    <!-- Material Icons https://fonts.google.com/icons -->
+    <link rel="stylesheet" href="assets/fonts/material.css" />
+    <link rel="stylesheet" href="assets/css/style.css" id="main-style-link" />
+
+    <!-- <link rel="stylesheet" href="assets/css/landing.css" /> -->
+    <style>
+      .hero-text-gradient {
+        --bg-size: 400%;
+        --color-one: rgb(37, 161, 244);
+        --color-two: rgb(249, 31, 169);
+
+        background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: move-bg 24s infinite linear;
+      }
+      @keyframes move-bg {
+        to {
+          background-position: var(--bg-size) 0;
+        }
+      }
+    </style>
+</head>
+<body>
+  <app-root></app-root>
+
+  <!-- Main Content end -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <!-- Js -->
+  <script src="assets/js/plugins/popper.min.js"></script>
+  <script src="assets/js/plugins/simplebar.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
+  <script src="assets/js/fonts/custom-font.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/pcoded.js"></script>
+  <script src="assets/js/plugins/feather.min.js"></script>
+
+  <!-- Page Specific JS start -->
+  <script src="assets/js/plugins/wow.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/plugins/Jarallax.js"></script>
+  <script>
+    // Start  Menu hide/show on scroll
+    let ost = 0;
+    document.addEventListener('scroll', function () {
+      let cOst = document.documentElement.scrollTop;
+      if (cOst == 0) {
+        document.querySelector('.navbar').classList.add('top-nav-collapse');
+      } else if (cOst > ost) {
+        document.querySelector('.navbar').classList.add('top-nav-collapse');
+        document.querySelector('.navbar').classList.remove('default');
+      } else {
+        document.querySelector('.navbar').classList.add('default');
+        document.querySelector('.navbar').classList.remove('top-nav-collapse');
+      }
+      ost = cOst;
+    });
+    // End Menu hide/show on scroll 
+    var wow = new WOW({
+      animateClass: 'animated'
+    });
+    wow.init();
+
+    // slider start
+    $('.screen-slide').owlCarousel({
+      loop: true,
+      margin: 30,
+      center: true,
+      nav: false,
+      dotsContainer: '.app_dotsContainer',
+      URLhashListener: true,
+      items: 1
+    });
+    $('.workspace-slider').owlCarousel({
+      loop: true,
+      margin: 30,
+      center: true,
+      nav: false,
+      dotsContainer: '.workspace-card-block',
+      URLhashListener: true,
+      items: 1.5
+    });
+    // slider end
+    // marquee start
+    $('.marquee').marquee({
+      duration: 500000,
+      pauseOnHover: true,
+      startVisible: true,
+      duplicated: true
+    });
+    $('.marquee-1').marquee({
+      duration: 500000,
+      pauseOnHover: true,
+      startVisible: true,
+      duplicated: true,
+      direction: 'right'
+    });
+    // marquee end
+  </script>
+</body>
+</html>
