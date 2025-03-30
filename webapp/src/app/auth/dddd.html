@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - QPay</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .login-container {
+      display: flex;
+      width: 991px;
+      height: 70vh;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 2.5rem;
+    }
+
+    .login-form {
+      flex: 1;
+      padding: 10px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login-form h1 {
+      margin-bottom: 18px;
+      color: #333;
+      text-align: center;
+      font-size: 32px;
+      font-family: 'Anek Bangla', sans-serif;
+    }
+
+    .login-form h1 span {
+      color: #C6183D;
+    }
+    .login-form p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .login-form label {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .login-form input {
+      width: 25rem;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+    .login-form input:focus {
+      outline: none;
+      border-color: #C6183D;
+    }
+
+    .login-form button {
+      margin-top: 20px;
+      padding: 10px;
+      background: #C6183D;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .login-form button:hover {
+      background: #df2c53;
+    }
+
+    .login-image {
+      flex: 1;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .login-image img {
+      max-height: 80%;
+      position: absolute;
+      z-index: 999;
+      object-fit: cover;
+      background-size: cover;
+      padding-bottom: 4.9rem;
+    }
+
+    .login-image p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 992px) {
+      .login-container {
+        flex-direction: column-reverse;
+        height: auto;
+      }
+      .login-form {
+        margin-top: -7rem;
+      }
+      .login-form input {
+      width: 90%;
+      border-radius: 5px;
+      margin-bottom: .5rem;
+      }
+      .login-image {
+        padding: 0;
+      }
+
+      .login-image img {
+        max-width: 50%;
+        max-height: 50%;
+        position: relative;
+        background-size: cover;
+        padding-bottom: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="login-container">
+      <div class="login-form">
+      <h1>Connexion à <span>QuanPay</span></h1>
+      <p>Vos paiements en toute simplicité et sécurité, au même endroit sans vous déplacer</p>
+      <form>
+        <label for="email">Identifiant</label>
+        <input type="email" id="email" placeholder="Entrez votre Identifiant ou Email de connexion " required> <br>
+
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+
+        <button type="submit">Se connecter</button>
+      </form>
+    </div>
+    <div class="login-image">
+      <img src="../../../public/assets/img/femme.png" alt="">
+      <div class="c_container">
+        <p>"Avec QuanPay, vos paiements en toute simplicité et sécurité, au même endroit sans vous déplacer"</p>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+
+</html>

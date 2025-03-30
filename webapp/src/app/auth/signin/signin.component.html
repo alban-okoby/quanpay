@@ -1,1 +1,39 @@
-<p>signin works!</p>
+<section>
+  <div class="login-container">
+    <div class="login-form">
+      <h1>Connexion à <span>QuanPay</span></h1>
+      <p>Vos paiements en toute simplicité et sécurité, au même endroit sans vous déplacer</p>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label for="email">Identifiant</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Entrez votre Identifiant ou Email de connexion"
+          required
+          formControlName="email"
+          [(ngModel)]="loginModel.email"
+        >
+        <br>
+
+        <label for="password">Mot de passe</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Entrez votre mot de passe"
+          required
+          formControlName="password"
+          [(ngModel)]="loginModel.password"
+        >
+
+        <button type="submit" [disabled]="isRequesting">Se connecter</button>
+      </form>
+    </div>
+
+    <div class="login-image">
+      <img src="assets/img/femme.png" alt="Image de connexion">
+      <div class="c_container">
+        <!-- <p>"Avec QuanPay, vos paiements en toute simplicité et sécurité, au même endroit sans vous déplacer"</p> -->
+      </div>
+    </div>
+  </div>
+</section>

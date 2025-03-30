@@ -1,0 +1,239 @@
+  <div class="row">
+    <div class="auth-sideconten col-md-4 col-sm-12">
+      <h5 class="mb-2" style="font-size: 22px">Solde compte</h5>
+      <div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" style="border-radius: 1.7rem;">
+            <div class="carousel-item active radiused">
+              <div class="radiused principal_account p-4 card">
+                <div class="f-flex">
+                  <span class="bank-icon"> <img src="assets/img/bank_img.png" alt=""> </span>
+                  <span class="account_type ml-1">Compte courant - Principal</span>
+                </div>
+                <div class="account-number">TG009 01285 **** **** ****</div>
+                <div class="balance">1 432 700 <span class="currency">XOF</span></div>
+                <div class="date">28 January 2021</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card principal_account p-4 radiused">
+                <div class="f-flex">
+                  <span class="bank-icon"> <img src="assets/img/bank_img.png" alt=""> </span>
+                  <span class="account_type ml-1">Compte Epargne - Second</span>
+                </div>
+                <div class="account-number">TG009 01326 **** **** ****</div>
+                <div class="balance">9 628 500 <span class="currency">XOF</span></div>
+                <div class="date">28 January 2021</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card principal_account p-4 radiused">
+                <div class="f-flex">
+                  <span class="bank-icon"> <img src="assets/img/bank_img.png" alt=""> </span>
+                  <span class="account_type ml-1">Compte Reserve - Autre</span>
+                </div>
+                <div class="account-number">TG009 02550 **** **** ****</div>
+                <div class="balance">4 230 000 <span class="currency">XOF</span></div>
+                <div class="date">28 January 2021</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators position-relative mt-3" style="color: red !important">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2" class="text-danger"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <h4 class="mb-2" style="font-size: 22px">Balance history</h4>
+      <div class="card radiused">
+        <div class="card-body">
+          <img src="assets/img/history.png" />
+          <div id="customer-rate-graph"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 contracts">
+    <div class="card radiused">
+      <div class="card-body pb-0">
+        <div class="d-flex align-items-center justify-content-between">
+          <h5 class="mb-0 title-22">Mes contrats en cours</h5>
+          <ul class="nav nav-tabs analytics-tab" id="myTab" role="tablist">
+            <li class="custom-nav-item" role="presentation">
+              <button class="nav-link active" id="analytics-tab-1" data-bs-toggle="tab"
+                data-bs-target="#analytics-tab-1-pane" type="button" role="tab"
+                aria-controls="analytics-tab-1-pane" aria-selected="true">
+                <img src="assets/img/contrat_vie.png" class="m-1" />
+                Contrats VIE</button>
+            </li>
+            <li class="custom-nav-item" role="presentation">
+              <button class="nav-link" id="analytics-tab-2" data-bs-toggle="tab"
+                data-bs-target="#analytics-tab-2-pane" type="button" role="tab"
+                aria-controls="analytics-tab-2-pane" aria-selected="false">
+                <img src="assets/img/contrat_non_vie.png" class="m-1" />
+                Contrats NON-VIE</button>
+            </li>
+          </ul>
+          <div class="associte_contract light-main-btn">
+            <button>Rattacher mes contrats</button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="analytics-tab-1-pane" role="tabpanel"
+          aria-labelledby="analytics-tab-1" tabindex="0">
+          <div class="row">
+            <!-- contract vie - table start -->
+            <div class="col-xl-12">
+              <div class="mt-4">
+                <div class="card-body table-border-style">
+                  <div class="table-responsive card pb-5">
+                    <table class="table" id="pc-dt-simple">
+                      <thead>
+                        <tr>
+                          <th>N° contrat</th>
+                          <th>N° Assuré</th>
+                          <th>Pays</th>
+                          <th data-type="date" data-format="DD/MM/YYYY">Effet</th>
+                          <th data-type="date" data-format="DD/MM/YYYY">Echance</th>
+                          <th>Prime</th>
+                          <th>Impayé</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End contrat vie table -->
+          </div>
+        </div>
+        <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2"
+          tabindex="0">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="mt-4">
+                <div class="card-body table-border-style">
+                  <div class="table-responsive card pb-5">
+                    <table class="table" id="pc-dt-simple">
+                      <thead>
+                        <tr>
+                          <th>N° contrat</th>
+                          <th>N° Assuré</th>
+                          <th>Pays</th>
+                          <th data-type="date" data-format="DD/MM/YYYY">Effet</th>
+                          <th data-type="date" data-format="DD/MM/YYYY">Echance</th>
+                          <th>Prime</th>
+                          <th>Impayé</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                        <tr>
+                          <td>FUTURIS 843</td>
+                          <td class="text-info num-assure">1645505</td>
+                          <td>Togo</td>
+                          <td>19/09/24</td>
+                          <td class="text-info">17/09/24</td>
+                          <td class="text-success">17 000 Fcfa</td>
+                          <td class="text-danger">-32 000 Fcfa</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "ttt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1743347914532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1743347925701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n quantech/\r\n │\r\n-├── api/                     # Backend Spring Boot\r\n+├── api/                     \r\n │   ├── Dockerfile            # Dockerfile pour le backend\r\n │   ├── pom.xml               # Fichier de configuration Maven\r\n │   ├── src/                  # Code source du backend Spring\r\n │   └── application.properties # Configurations de Spring\r\n"
+                },
+                {
+                    "date": 1743347936244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n quantech/\r\n │\r\n-├── api/                     \r\n-│   ├── Dockerfile            # Dockerfile pour le backend\r\n-│   ├── pom.xml               # Fichier de configuration Maven\r\n-│   ├── src/                  # Code source du backend Spring\r\n+├── api/\r\n+│   ├── Dockerfile\r\n+│   ├── pom.xml\r\n+│   ├── src/                  # Code source du backed Spring\r\n │   └── application.properties # Configurations de Spring\r\n │\r\n ├── webapp/                   # Frontend Angular\r\n │   ├── Dockerfile            # Dockerfile pour le frontend\r\n@@ -15,5 +15,5 @@\n ├── db/                       # Base de données\r\n │   └── password.txt          # Mot de passe de la base de données PostgreSQL\r\n │\r\n ├── docker-compose.yml        # Orchestration des conteneurs\r\n-└── .dockerignore           \r\n+└── .dockerignore\r\n"
+                },
+                {
+                    "date": 1743347943553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n ├── api/\r\n │   ├── Dockerfile\r\n │   ├── pom.xml\r\n │   ├── src/\r\n-│   └── application.properties # Configurations de Spring\r\n+│   └── application.properties \r\n │\r\n ├── webapp/                   # Frontend Angular\r\n │   ├── Dockerfile            # Dockerfile pour le frontend\r\n │   ├── package.json          # Dépendances du frontend\r\n"
+                },
+                {
+                    "date": 1743347963794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n ├── api/\r\n │   ├── Dockerfile\r\n │   ├── pom.xml\r\n │   ├── src/\r\n-│   └── application.properties \r\n+│   └── application.properties\r\n │\r\n ├── webapp/                   # Frontend Angular\r\n │   ├── Dockerfile            # Dockerfile pour le frontend\r\n │   ├── package.json          # Dépendances du frontend\r\n@@ -15,5 +15,5 @@\n ├── db/                       # Base de données\r\n │   └── password.txt          # Mot de passe de la base de données PostgreSQL\r\n │\r\n ├── docker-compose.yml        # Orchestration des conteneurs\r\n-└── .dockerignore\r\n+\r\n"
+                }
+            ],
+            "date": 1743347914532,
+            "name": "Commit-0",
+            "content": "quantech/\r\n│\r\n├── api/                     # Backend Spring Boot\r\n│   ├── Dockerfile            # Dockerfile pour le backend\r\n│   ├── pom.xml               # Fichier de configuration Maven\r\n│   ├── src/                  # Code source du backend Spring\r\n│   └── application.properties # Configurations de Spring\r\n│\r\n├── webapp/                   # Frontend Angular\r\n│   ├── Dockerfile            # Dockerfile pour le frontend\r\n│   ├── package.json          # Dépendances du frontend\r\n│   ├── src/                  # Code source de l'application Angular\r\n│   └── angular.json          # Configurations Angular\r\n│\r\n├── db/                       # Base de données\r\n│   └── password.txt          # Mot de passe de la base de données PostgreSQL\r\n│\r\n├── docker-compose.yml        # Orchestration des conteneurs\r\n└── .dockerignore           \r\n"
+        }
+    ]
+}

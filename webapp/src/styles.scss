@@ -32,6 +32,11 @@
 .radiused {
   border-radius: 1.5rem;
 }
+.ligne-verticale {
+  width: 2px;            
+  height: 100px;         
+  background-color: #B4B4B4; 
+}
 
 /* Start Solde Compte Card */
 .principal_account {
@@ -125,7 +130,7 @@
 }
 
 // My cards
-.mes-cartes-list {
+.carte-item {
   display: flex;
   gap: 10px;
   overflow-x: auto;
@@ -136,6 +141,7 @@
   background: url(../public/assets/img/card_frame.png) #c6183d;
   color: #fff;
   border-radius: 15px;
+  margin-right: .5rem;
 
   .carte-type {
     text-align: right;
@@ -313,12 +319,12 @@
   font-size: 22px;
 }
 
-.associte_contract {
+.associte_contract, .light-main-btn {
   background: var(--main-color-light);
   padding: 0.1rem 0.5rem;
   border-radius: 10px;
 }
-.associte_contract button {
+.associte_contract button, .light-main-btn butto{
   color: var(--btn-main);
   border: none;
   padding: 0.55rem 0.35rem;
@@ -327,3 +333,5 @@
   font-weight: 700;
 }
 // End Contrat
+
+// Some responsive 

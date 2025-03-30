@@ -1,1 +1,227 @@
-<p>account works!</p>
+<div class="row">
+  <div class="col-lg-8 mt-5">
+    <h5 class="mb-2 title-22">Récapitulatif Compte</h5>
+    <!-- Account details -->
+    <div class="card p-3">
+      <div class="account-container">
+        <div class="account-heade">
+          <img src="assets/img/bank_img.png" />
+          <a href="#" class="text-black m-1">Libellé compte</a> <br>
+          <h2 class="">Compte courant - Principal <img src="assets/img/navigate_left.png" /><img src="assets/img/navigate_right.png" /> </h2>
+        </div>
+        <div class="account-details">
+          <div class="left p-3">
+            <div class="d-flex">
+              <table class="p-4">
+                <tr class="heads">
+                  <th class="">Code </th>
+                  <th>Code Ag</th>
+                  <th>Numéro compte</th>
+                  <th>RIB</th>
+                </tr>
+                <tr class="values">
+                  <td>TG151</td>
+                  <td>01160</td>
+                  <td>10733570003</td>
+                  <td>60</td>
+                </tr>
+              </table>
+            </div>
+            <p class="mt-3"><span class="head">IBAN</span><br> <span>TG534TG82789148484129100394384</span></p>
+            <p><span class="head">CODE SWIFT</span><br> <span>BPECTGTGXXX</span></p>
+          </div>
+          <div class="ligne-verticale m-3"></div>
+          <div class="center">
+            <p>Mon solde<br> <span class="balance">12 670 550 XOF</span></p>
+            <p><span>Devise</span><br> XOF</p>
+            <p><span class="m-3">Statut</span> <br> <span class="status m-2">Actif</span></p>
+          </div>
+          <div class="ligne-verticale m-3"></div>
+          <div class="right">
+            <p><span class="head">Pays domiciliation</span><br> <img src="assets/img/flag_of_togo.png" /> </p>
+            <p>Domiciliation Agence<br> <span class="bold">Cotonou</span></p>
+          </div>
+        </div>
+        <!-- Account details actions -->
+        <div class="account-actions">
+          <button class="new-account btn-main"><span class="plus">+</span> Nouveau compte</button>
+          <div class="light-main-btn">
+          <button class="transfer-mon text-danger">💸 Transférer de l’argent</button>
+          </div>
+          <div class="light-main-btn ml-2">
+            <button class="download-ri light-main-btn text-danger"><img src="assets/img/download.png" alt="" /> Télécharger mon RIB</button>
+          </div>
+        </div>
+        <!-- End account detals actions -->
+      </div>
+    </div>
+    <!-- ENd account details -->
+
+    <!-- Loan simulation -->
+    <div class="simulate_loan card p-3">
+      <nav class="navbar">
+        <button>📄 Voir mon relevé</button>
+        <button>📝 Demander un chéquier</button>
+        <button class="active text-danger">📊 Simuler un prêt</button>
+        <button>👥 Gérer mes bénéficiaires</button>
+      </nav>
+      <div class="content">
+        <div class="left">
+          <label>Type du prêt</label>
+          <select>
+            <option>🏦 Prêt Immobilier</option>
+            <option>🏦 Prêt Etudiant</option>
+            <option>🏦 Prêt Santé</option>
+          </select>
+          <label>Taux d’intérêt</label>
+          <input type="range" min="7" max="14" value="9">
+          <label>Montant du prêt</label>
+          <input type="text" value="10.000.000 FCFA">
+          <label>Taux d’intérêt</label>
+          <input type="range" min="1" max="60" value="16">
+          <button class="simulate btn btn-main text-center">Simuler</button>
+        </div>
+        <div class="right">
+          <label>Montant mensualité</label>
+          <input type="text" value="530.000 FCFA">
+          <label>Montant total avec intérêt</label>
+          <input type="text" value="12.700.500 FCFA">
+        </div>
+      </div>
+    </div>
+    <!-- End loan simulation -->
+  </div>
+
+  <!-- Right section -->
+  <div class="col-lg-4" style="margin-top: -1.5rem; padding: .15rem; overflow: hidden;">
+    <div class="card pt-4 p-3">
+      <h5 class="mb-0 mt-4 card-title fw-700 main-family" style="">Mes cartes</h5>
+      <span class="dropdown_cards">...</span>
+      <div class="row">
+        <div>
+          <div class="card-body d-flex muti_card">
+            <div style="width: 80%">
+              <div class="carte-item">
+                <span class="carte-type float-right mt-1 mr-8x  r-0">BankCash</span>
+                <span class="carte-level float-right mt-4 mr-7x">Compte premium</span>
+                <span class="carte-number">4509 81** **** ****</span>
+                <div class="carte-date">
+                  <div>Exp Date</div>
+                  <div class="value">07/26</div>
+                </div>
+                <div class="carte-cvv">CVV <br><span class="value">952</span></div>
+              </div>
+            </div>
+            <div class="card2">
+              <div class="carte-item" style="background-color: yellow; width: 5rem">
+                <span class="carte-number">4509<span class="ml-2">81</span> </span>
+                <div class="carte-date">
+                  <div>Exp Date</div>
+                  <div class="value">07/26</div>
+                </div>
+                <div class="carte-cvv">CVV <br><span class="value">952</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5 class="card-title fw-700 main-family mt-3">Transactions</h5>
+
+      <div class="search-bar-container mt-2">
+        <div class="search-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="text" class="search-input" placeholder="Rechercher...">
+      </div>
+      <!-- Start Transactions history -->
+      <div class="card-body">
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_paypal.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit from my</div>
+              <div class="transaction-date text-info">28 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount negative">- $ 850</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_other.png" alt="Transaction by paypal" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit Paypal</div>
+              <div class="transaction-date text-info">25 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount positive">+ $ 2 500</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_card.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Jemi Wilson</div>
+              <div class="transaction-date text-info">21 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount text-success">- $ 400</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_paypal.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit from my</div>
+              <div class="transaction-date text-info">20 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount text-danger">- $ 150</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_other.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit from my</div>
+              <div class="transaction-date text-info">20 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount text-danger">- $ 150</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_card.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit from my</div>
+              <div class="transaction-date text-info">20 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount text-danger">- $ 150</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_other.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit from my</div>
+              <div class="transaction-date text-info">20 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount text-danger">- $ 150</div>
+        </div>
+      </div>
+      <!-- End transactions history -->
+    </div>
+  </div>
+</div>
+<!-- End right section -->

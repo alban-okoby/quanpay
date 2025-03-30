@@ -1,0 +1,260 @@
+// Start Transaction search
+* {
+  font-family: "Anek Bangla", sans-serif;
+  font-size: 16px;
+}
+.title-22 {
+  font-size: 24px;
+
+}
+.search-bar-container {
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  margin-right: 10px;
+  color: #22283b;
+  margin-top: 0.5rem;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #333;
+  flex-grow: 1;
+  padding: 0.32rem 0.8rem;
+  background: none;
+}
+
+.search-icon .fa-search {
+  width: 30px;
+  height: 10px;
+  fill: #22283b;
+  cursor: pointer;
+}
+// End Transaction search
+
+.muti_card {
+  padding: 0.45rem 0;
+
+  > div {
+    margin-right: 0.5rem;
+  }
+  .card2 {
+    margin-right: -2rem;
+    margin-left: 0.3rem;
+    // max-width: 200px;
+  }
+  .mr-8x {
+    margin-right: 8rem;
+  }
+  .mr-7x {
+    margin-right: 7rem;
+  }
+  .r-0 {
+    right: 0;
+  }
+}
+
+.dropdown_cards {
+  float: inline-end;
+  right: 0;
+  margin-bottom: -7.2rem;
+  margin-right: 0.7rem;
+  position: absolute;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+// Card account fisrt section 
+.account-container h2, .account-container a {
+  margin-left: 2.9rem;
+}
+.account-container a {
+  margin-left: 2.9rem;
+  padding-left: .5rem;
+}
+
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.account-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.account-details {
+  display: flex;
+  justify-content: stretch;
+  padding: 15px 0;
+}
+
+table .values, .values {
+  font-weight: 600;
+  // font-size
+}
+table .heads {
+  width: 100%;
+ th{
+  font-weight: 100;
+  margin-left: .35rem;
+}
+}
+
+
+.center,
+.right {
+  // width: 30%;
+}
+
+.balance {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.status {
+  background: #d4f4dd;
+  color: #2e7d32;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.account-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+  .btn-main {
+    border-radius: 15px;
+    font-weight: 600;
+  }
+  .light-main-btn {
+    border-radius: 15px;
+    // font-size: 15px;
+    font-weight: 600;
+    color: var(--btn-main);
+  }
+  button {
+    border: none;
+    padding: 12px .2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: .35rem;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+}
+
+.ligne-verticale {
+  width: 1px;            
+  height: 100px;         
+  background-color: #B4B4B4; 
+}
+
+.new-account {
+  background: #d32f2f;
+  color: white;
+}
+
+.transfer-money {
+  background: #f48fb1;
+  color: white;
+}
+
+.download-rib {
+  background: #f48fb1;
+  color: white;
+}
+// End card account fisrt section
+
+// card loan section 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+button.active {
+  color: red;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.left,
+.right {
+  // width: 100%;
+}
+.right, .center {
+  flex: 1;
+}
+.left .d-flex p .head{
+  font-size: 12px;
+  display: inline-block;
+}
+
+.left .d-flex p .head span{
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button.simulate {
+  background-color: var(--btn-main);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 5.5rem;
+  text-align: center;
+}
+// End card loan simulation section

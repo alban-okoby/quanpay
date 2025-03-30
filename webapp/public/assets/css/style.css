@@ -6307,14 +6307,6 @@ textarea.is-invalid.dataTable-input {
   background-size: 100% 100%;
 }
 
-/* rtl:options: {
-  "autoRename": true,
-  "stringMap":[ {
-    "name"    : "prev-next",
-    "search"  : "prev",
-    "replace" : "next"
-  } ]
-} */
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
 }
@@ -6337,17 +6329,19 @@ textarea.is-invalid.dataTable-input {
   margin-left: 15%;
   list-style: none;
 }
+
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
+  width: 10px;
+  height: 10px;
   padding: 0;
+  border-radius: 50px;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: gray;
   background-clip: padding-box;
   border: 0;
   border-top: 10px solid transparent;
@@ -6362,6 +6356,11 @@ textarea.is-invalid.dataTable-input {
 }
 .carousel-indicators .active {
   opacity: 1;
+  background-color: var(--btn-main);
+  border-radius: 50%;
+}
+.carousel-indicators * {
+  border-radius: 50%;
 }
 
 .carousel-caption {
@@ -6472,6 +6471,12 @@ textarea.is-invalid.dataTable-input {
   --bs-offcanvas-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
   --bs-offcanvas-transition: transform 0.3s ease-in-out;
   --bs-offcanvas-title-line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-left {
+    display: none;
+  }
 }
 
 @media (max-width: 575.98px) {

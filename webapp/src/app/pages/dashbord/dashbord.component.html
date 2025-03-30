@@ -1,1 +1,119 @@
-<p>dashbord works!</p>
+<div class="row">
+  <div class="col-lg-8 mt-5">
+    <app-dash-main></app-dash-main>
+  </div>
+  <div class="col-lg-4" style="margin-top: -1.5rem; padding: .55rem;">
+    <div class="card pt-4 p-3">
+      <h5 class="mb-0 mt-4 card-title fw-700 main-family" style="font-weight: 700; font-size: 16px">Mes cartes</h5>
+      <div class="row">
+        <div class="card-body">
+          <div class="mes-cartes-list">
+            <div class="carte-item">
+              <span class="carte-type float-right">BankCash</span>
+              <span class="carte-level float-right mt-4">Compte premium</span>
+              <span class="carte-number">4509 81** **** ****</span>
+              <div class="carte-date">
+                <div>Exp Date</div>
+                <div class="value">07/26</div>
+              </div>
+              <div class="carte-cvv">CVV <br><span class="value">952</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-actions row p-4">
+        <div class="action col-lg-4">
+          <div class="card-bordered">
+            <img src="assets/img/card_action1.png" />
+            <h5>Transferer de l'argent</h5>
+          </div>
+        </div>
+        <div class="action col-lg-4">
+          <div class="card-bordered">
+            <img src="assets/img/card_action2.png" />
+            <h5>Voir mon relevé</h5>
+          </div>
+        </div>
+        <div class="action col-lg-4">
+          <div class="card-bordered">
+            <img src="assets/img/card_action2.png" />
+            <h5>Simuler un prêt</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Benef -->
+      <div class="card-header mb-4" style="color:#22283B14"></div>
+      <h5 class="card-title fw-700 main-family">Bénéficiaires</h5>
+      <div class="card-body">
+        <div class="beneficiaires-list">
+          <div class="beneficiaire-item">AG</div>
+          <div class="beneficiaire-item">KF</div>
+          <div class="beneficiaire-item">ID</div>
+          <div class="beneficiaire-item">ZK</div>
+          <a href="#" class="avtar avtar-s btn btn-light rounded-circle">
+            <i class="ti ti-plus f-20"></i>
+          </a>
+          <!-- <button class="beneficiaires-add">+</button> -->
+        </div>
+      </div>
+      <!-- End Benef -->
+
+      <!-- Start Transactions history -->
+      <div class="card-header mb-4"></div>
+      <h5 class="card-title fw-700 main-family">Transactions</h5>
+      <div class="card-body">
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_card.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit from my</div>
+              <div class="transaction-date text-info">28 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount negative">- $ 850</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_paypal.png" alt="Transaction by paypal" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit Paypal</div>
+              <div class="transaction-date text-info">25 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount positive">+ $ 2 500</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_card.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Jemi Wilson</div>
+              <div class="transaction-date text-info">21 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount text-success">- $ 400</div>
+        </div>
+        <div class="transaction-item">
+          <div class="transaction-details">
+            <div class="transaction-icon">
+              <img src="assets/img/transaction_card.png" alt="Transaction title" />
+            </div>
+            <div class="transaction-info">
+              <div>Deposit from my</div>
+              <div class="transaction-date text-info">20 January 2021</div>
+            </div>
+          </div>
+          <div class="transaction-amount text-danger">- $ 150</div>
+        </div>
+      </div>
+      <!-- End transactions history -->
+    </div>
+  </div>
+</div>
