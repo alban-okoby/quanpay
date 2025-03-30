@@ -19821,6 +19821,12 @@ pre[class*=language-] > code {
   /* margin: 0 5px; */
 }
 
+.pc-sidebar .pc-item.active {
+  border-left: .525rem solid var(--pc-sidebar-color);
+  transition: .4s all;
+  /* margin: 0 5px; */
+}
+
 .pc-sidebar .pc-navbar > .pc-item > .pc-link::after {
   content: "";
   border-radius: var(--bs-border-radius);
@@ -19834,6 +19840,8 @@ pre[class*=language-] > code {
 .pc-sidebar .pc-navbar > .pc-item.active > .pc-link {
   font-weight: 500;
   color: var(--pc-sidebar-active-color);
+  border-left: .525rem solid var(--pc-sidebar-color);
+
 }
 .pc-sidebar .pc-navbar > .pc-item.active > .pc-link:after {
   background: var(--pc-sidebar-active-color);

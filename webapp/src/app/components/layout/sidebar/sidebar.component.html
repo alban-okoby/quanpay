@@ -1,7 +1,7 @@
 <div class="navbar-content mt-4">
   <ul class="pc-navbar">
     <li class="pc-item">
-      <a href="#" class="pc-link" routerLink="/">
+      <a href="#" class="pc-link" routerLink="/" routerLinkActive="active">
         <span class="pc-micon">
           <svg class="pc-icon">
             <use xlink:href="#custom-status-up"></use>
@@ -10,8 +10,8 @@
         <span class="pc-mtext">Dashboard</span>
       </a>
     </li>
-    <li class="pc-item">
-      <a href="#" class="pc-link" routerLink="/myaccounts">
+    <li class="pc-item" routerLinkActive="active" routerLink="/myaccounts">
+      <a class="pc-link">
         <span class="pc-micon">
           <svg class="pc-icon">
             <use xlink:href="#custom-fatrows"></use>
@@ -21,7 +21,7 @@
       </a>
     </li>
     <li class="pc-item">
-      <a href="#" class="pc-link">
+      <a href="javascript:void(0)" class="pc-link">
         <span class="pc-micon">
           <svg class="pc-icon">
             <use xlink:href="#custom-presentation-chart"></use>
@@ -29,7 +29,7 @@
         </span>
         <span class="pc-mtext">Mes assurances</span></a>
     </li>
-    <li class="pc-item"><a href="#" class="pc-link" target="_blank">
+    <li class="pc-item"><a href="javascript:void(0)" class="pc-link" target="_blank">
         <span class="pc-micon">
           <svg class="pc-icon">
             <use xlink:href="#custom-24-support"></use>
@@ -38,22 +38,22 @@
         <span class="pc-mtext">Mes cartes</span>
       </a>
     </li>
-    <li class="pc-item"><a href="" class="pc-link" target="_blank"><span class="pc-micon">
+    <li class="pc-item"><a href="javascript:void(0)" class="pc-link" target="_blank"><span class="pc-micon">
           <svg class="pc-icon">
             <use xlink:href="#custom-airplane"></use>
           </svg> </span><span class="pc-mtext">Finances personnelles</span></a>
     </li>
-    <li class="pc-item"><a href="" class="pc-link" target="_blank"><span class="pc-micon">
+    <li class="pc-item"><a href="javascript:void(0)" class="pc-link" target="_blank"><span class="pc-micon">
           <svg class="pc-icon">
             <use xlink:href="#custom-airplane"></use>
           </svg> </span><span class="pc-mtext">Devises & Changes</span></a>
     </li>
     <ul class="nav-bottom">
-      <li class="pc-item"><a href="#" class="pc-link" target="_blank"><span class="pc-micon">
+      <li class="pc-item"><a href="javascript:void(0)" class="pc-link" target="_blank"><span class="pc-micon">
             <i class="ti ti-user"></i>
           </span><span class="pc-mtext">Gérer mon profil</span></a>
       </li>
-      <li class="pc-item"><a href="#" class="pc-link" target="_blank">
+      <li class="pc-item"><a href="javascript:void(0)" class="pc-link" target="_blank" (click)="logout()">
           <svg class="pc-icon me-2">
             <use xlink:href="#custom-logout-1-outline"></use>
           </svg>
