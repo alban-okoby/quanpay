@@ -50,6 +50,6 @@ Pour ce projet, j'ai choisi *Angular* pour le frontend car il me permet de crée
 
 Pour le backend, Spring Boot est parfait pour me développer des API REST rapidement, avec une configuration minimale, il offre des outils de sécurité robustes via Spring Security. Il s'intègre bien plusieurs bases de données, j'ai donc pris PostgreSQL qui est un choix populaire dans le Relationnel.
 
-Le projet n'est pas terminé et j'aurai aimé faire plus. Je conclus par dire que ces deux technologies sont facilement déployables en Docker en j'ai une expérience avec, ce qui m'a simplifier le développement et le déploiement dans un délai serré.
+Le projet n'est pas terminé et j'aurai aimé faire plus. Je conclus par dire que ces deux technologies sont facilement déployables et extensible pour des projets de toute taille. Et vu que j'ai une expérience avec, ce qui m'a simplifier le développement et le déploiement dans un container Docker dans un délai serré.
 
 Have a nice day ! 
