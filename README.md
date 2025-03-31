@@ -25,11 +25,21 @@ Cela va démarrer tous les services définis dans le fichier *compose.yml* :
 La base de données PostgreSQL sera accessible via l'adresse interne du réseau Docker, au sein du service db (port 5432).
 
 ### Accéder à l'Application
-Une fois les conteneurs démarrés, vous pouvez accéder à l'application de la manière suivante :
+Une fois les conteneurs démarrés comme sur la capture ci-dessous 
+<img src="https://github.com/alban-okoby/quanpay/blob/main/webapp/public/assets/screensshots/frontend_success.PNG" />
 
-Frontend : Ouvrez votre navigateur et allez sur http://localhost:4200 pour accéder à l'interface utilisateur.
+A la fin du démarrage des applications, un utilisateur est auto-créer pour vous permettre d'accéder à l'interface principale (dashbord)
+- identifiant : albanokoby225@gmail.com
+- password: strong@1234
 
-Accédez à l'API backend en allant sur http://localhost:8000.
+Ouvrez un navigateur et allez sur http://localhost:4200 pour accéder à l'interface utilisateur.
+
+<img src="https://github.com/alban-okoby/quanpay/blob/main/webapp/public/assets/screensshots/login_page.png" />
+
+
+Si les informations sont bien renseignées, vous aller voir la page d'acceuil suivante : 
+<img src="https://github.com/alban-okoby/quanpay/blob/main/webapp/public/assets/screensshots/dash.png" />
+
 
 ### Arrêter et Supprimer les Conteneurs
 Lorsque vous avez terminé, vous pouvez arrêter tous les conteneurs en exécutant la commande suivante :
@@ -41,4 +51,5 @@ Pour ce projet, j'ai choisi *Angular* pour le frontend car il me permet de crée
 Pour le backend, Spring Boot est parfait pour me développer des API REST rapidement, avec une configuration minimale, il offre des outils de sécurité robustes via Spring Security. Il s'intègre bien plusieurs bases de données, j'ai donc pris PostgreSQL qui est un choix populaire dans le Relationnel.
 
 Le projet n'est pas terminé et j'aurai aimé faire plus. Je conclus par dire que ces deux technologies sont facilement déployables en Docker en j'ai une expérience avec, ce qui m'a simplifier le développement et le déploiement dans un délai serré.
+
 Have a nice day ! 
