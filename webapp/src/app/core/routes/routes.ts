@@ -11,6 +11,13 @@ export class Routes {
 
   // PRINCIPAL PAGES
   DASHBOARD: string = `${this.basePath}`;
-  MY_ACCOUNTS: string = `${this.basePath}/myaccounts`;
-  ERROR_404: string = `${this.basePath}/error/not-found`;
+  BUSINESS: string = `business`;
+  MY_ACCOUNTS: string = `myaccounts`;
+  MY_ACCOUNTS_SEND_MONEY: string = `${this.BUSINESS}/myaccounts/send-money}`;
+  MY_ASSURANCES: string = `${this.BUSINESS}/myassurances`
+  MY_CARDS: string = `${this.BUSINESS}/mycards`;
+  MY_FINANCES: string = `${this.BUSINESS}/finances`
+  DEVISES_EXCHANGES: string = `${this.BUSINESS}/devises-exchanges`
+  MY_PROFILE: string = `profile`
+  ERROR_404: string = `error/not-found`;
 }

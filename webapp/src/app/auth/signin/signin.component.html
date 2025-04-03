@@ -4,7 +4,7 @@
       <h1>Connexion à <span>QuanPay</span></h1>
       <p>Vos paiements en toute simplicité et sécurité, au même endroit sans vous déplacer</p>
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <label for="email">Identifiant</label>
+        <label for="email">Identifiant</label> <br>
         <input
           type="email"
           id="email"
@@ -24,7 +24,6 @@
           formControlName="password"
           [(ngModel)]="loginModel.password"
         >
-
         <button type="submit" [disabled]="isRequesting">Se connecter</button>
       </form>
     </div>
@@ -32,7 +31,6 @@
     <div class="login-image">
       <img src="assets/img/femme.png" alt="Image de connexion">
       <div class="c_container">
-        <!-- <p>"Avec QuanPay, vos paiements en toute simplicité et sécurité, au même endroit sans vous déplacer"</p> -->
       </div>
     </div>
   </div>

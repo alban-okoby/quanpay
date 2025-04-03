@@ -95,24 +95,25 @@ export class SigninComponent {
             //success msg
             setTimeout(() => {
               if (res.user.email != null && userRoles == 'ROLE_ADMIN') {
-                this.router.navigateByUrl('/business/dashboard');
-                this.showSuccessMessage(res.user.name);
+                this.router.navigateByUrl('/');
+                this.showSuccessMessage(res.user.displayName);
                 setTimeout(() => {
                   window.location.reload();
                 }, 1500)
               }
+              // Many userTypes ? Not yet definded
               if (res.user.email != null && ( userRoles == 'ROLE_USER' || userRoles == 'ROLE_HEAD')) {
-                this.router.navigateByUrl('/account/profil');
+                this.router.navigateByUrl('/');
                 setTimeout(() => {
                   window.location.reload();
                 }, 1500)
                 this.showSuccessMessage(res.user.displayName);
-              }else {
-                this.router.navigateByUrl('/');
+              }
+              // For user want to try solutions before buy
+              else {
+                this.router.navigateByUrl('/preview');
               }
           }, 3100)
-
-          // }
         },
         (err: any) => {
           // Error msg
@@ -144,9 +145,10 @@ export class SigninComponent {
   showSuccessMessage(username: string) {
     const Toast = Swal.mixin({
       toast: true,
+      backdrop: false,
       position: 'top-end',
       showConfirmButton: false,
-      timer: 3000,
+      timer: 5000,
       timerProgressBar: false,
       didOpen: (toast: any) => {
         toast.addEventListener('mouseenter', Swal.stopTimer);
@@ -164,6 +166,7 @@ export class SigninComponent {
   showErorMessage(username?: string) {
     const Toast = Swal.mixin({
       toast: true,
+      backdrop: false,
       position: 'top-end',
       showConfirmButton: false,
       timer: 3000,
@@ -175,7 +178,7 @@ export class SigninComponent {
     });
 
     Toast.fire({
-      icon: 'success',
+      icon: 'error',
       title: `Identifiants incorrects ❌`,
       timer: 5000,
     });

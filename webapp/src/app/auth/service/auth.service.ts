@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { Observable, of } from 'rxjs';
 import { tap, delay, catchError } from 'rxjs/operators';
@@ -10,7 +11,7 @@ import { environment } from '../../../environments/environment';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
 
   }
 
@@ -49,6 +50,7 @@ export class AuthService {
   logout(): void {
     localStorage.clear();
     sessionStorage.clear();
-    this.isLoggedIn = false;
+    this.isLoggedIn = false;  
+    this.router.navigateByUrl('/auth/signin');
   }
 }

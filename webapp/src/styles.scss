@@ -1,7 +1,18 @@
 // GLOBAL STYLE
-// font family 
+// font family
 @import url('https://fonts.cdnfonts.com/css/anek-bangla');
+@import 'sweetalert2/src/sweetalert2.scss';
+// body.swal2-shown > [aria-hidden='true'] {
+//   transition: 0.1s filter;
+//   filter: none;
+// }
+body.swal2-shown {
+  overflow: visible;
+}
 
+body.swal2-shown .swal2-backdrop {
+  display: none !important;
+}
 // Colors
 .text-danger {
   color: var(--text-danger);
@@ -33,9 +44,9 @@
   border-radius: 1.5rem;
 }
 .ligne-verticale {
-  width: 2px;            
-  height: 100px;         
-  background-color: #B4B4B4; 
+  width: 2px;
+  height: 100px;
+  background-color: #B4B4B4;
 }
 
 /* Start Solde Compte Card */
@@ -48,20 +59,20 @@
   text-align: center;
   align-self: center;
   padding: .25rem;
-  
+
   .bank-icon {
     color: #c1002d;
   }
   .account_type {
     text-align: center;
   }
-  
+
   .account-number {
     font-weight: bold;
     color: #000;
     margin-top: 5px;
   }
-  
+
   .balance {
     font-size: 36px;
     font-weight: 900;
@@ -69,11 +80,11 @@
     margin: 10px 0;
     font-family: 'Anek Bangla', serif;
   }
-  
+
   .currency {
     font-size: 16px;
   }
-  
+
   .date {
     font-size: 12px;
     color: #777;
@@ -100,7 +111,7 @@
 /* End Solde Compte Card */
 
 // Custom nav items (Mes contracts)
-.nav-tabs {
+.custom-nav-tabs {
   background: #d9d9d945;
   border-radius: 1rem;
   height: 2.55rem;
@@ -110,6 +121,14 @@
   align-self: center;
   text-decoration: none;
   z-index: 999;
+}
+
+@media screen and (max-width: 768px) { 
+  .custom-nav-item .nav-link {
+    padding: 0.5rem .5rem;
+    color: var(--text-black);
+    min-width: 100%;
+  }
 }
 .custom-nav-item .nav-link {
   padding: 0.5rem 1rem;
@@ -334,4 +353,4 @@
 }
 // End Contrat
 
-// Some responsive 
+// Some responsive
