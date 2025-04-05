@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  web:
+      build:
+        context: webapp
+        target: builder
+      ports:
+        - 4200:4200
+      volumes:
+        - ./webapp:/webapp
+        - /webapp/node_modules
+
+  backend:
+    build: api
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_DB=quanpay
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/quanpay 
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres  
+      # - SPRING_DATASOURCE_PASSWORD_FILE=postgres  
+      # - SPRING_DATASOURCE_PASSWORD_FILE=/run/secrets/db-password  
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create 
+      - SPRING_MAIN_ALLOW_CIRCULAR_REFERENCES=true 
+      - SERVER_PORT=8000
+    networks:
+      - spring-postgres
+    secrets:
+      - db-password
+    depends_on:
+      - db
+    command: ["java", "-jar", "/app/app.jar"]
+
+  db:
+    image: postgres
+    restart: always
+    secrets:
+      - db-password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - spring-postgres
+    environment:
+      - POSTGRES_DB=quanpay
+      - POSTGRES_PASSWORD=postgres
+      # - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
+    expose:
+      - 5432
+
+volumes:
+  db-data:
+
+secrets:
+  db-password:
+    file: db/password.txt
+
+networks:
+  spring-postgres:
+    driver: bridge

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports: [
     FormsModule,

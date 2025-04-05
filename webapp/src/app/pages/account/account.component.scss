@@ -73,7 +73,7 @@
 }
 
 
-// Card account fisrt section 
+// Card account fisrt section
 .account-container h2, .account-container a {
   margin-left: 2.9rem;
 }
@@ -101,15 +101,23 @@
   padding: 15px 0;
 }
 
-table .values, .values {
-  font-weight: 600;
-  // font-size
-}
-table .heads {
-  width: 100%;
- th{
-  font-weight: 100;
-  margin-left: .35rem;
+table  {
+  margin-left: -1.1rem;
+  .heads {
+    width: 100%;
+    th{
+      font-weight: 100;
+      margin-left: .35rem;
+      // margin-left: 3.35rem;
+      padding: 0 1.3rem;
+    }
+  }
+  .values {
+    font-weight: 600;
+    // font-size
+    td {
+    padding: 0 1.2rem;
+   }
   }
 }
 
@@ -159,9 +167,9 @@ table .heads {
 }
 
 .ligne-verticale {
-  width: 1px;            
-  height: 100px;         
-  background-color: #B4B4B4; 
+  width: 1px;
+  height: 100px;
+  background-color: #B4B4B4;
 }
 
 .new-account {
@@ -180,7 +188,7 @@ table .heads {
 }
 // End card account fisrt section
 
-// card loan section 
+// card loan section
 .navbar {
   display: flex;
   justify-content: space-around;

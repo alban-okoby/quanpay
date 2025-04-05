@@ -123,7 +123,7 @@ body.swal2-shown .swal2-backdrop {
   z-index: 999;
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
   .custom-nav-item .nav-link {
     padding: 0.5rem .5rem;
     color: var(--text-black);
@@ -354,3 +354,29 @@ body.swal2-shown .swal2-backdrop {
 // End Contrat
 
 // Some responsive
+
+// Start OTP input
+// ngx-otp-input {
+//   .ngx-otp-input-form {
+//     border: 1px solid red;
+//     width: 100%;
+//   }
+//   .ngx-otp-input-box {
+//     width: 549px;
+//     height: 47px;
+//   }
+
+// }
+.otp-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+// ENd OTP input
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
