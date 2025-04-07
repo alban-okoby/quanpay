@@ -85,9 +85,11 @@ export class SigninComponent {
         const array1 = Math.floor(Math.random() * 999999999999999);
         const array2 = Math.floor(Math.random() * 999999999999999);
         localStorage.setItem('wxcvbnmlkjhgfdsqazertyuiop', array1 + rolesId + array2);
+        localStorage.setItem('2wxcvbnmlkjhgfdsqazertyuiop', array1 + res.accessToken + array2);
         localStorage.setItem('response', res.status);
         this.isLoggedIn = true;
         localStorage.setItem('fuckYou', 'true');
+        this.auth.setTokenInCookie('_YXV0aGVudGljYXRlZCI6dHJ1Z', res.accessToken, true);
   
         // Success message
         setTimeout(() => {

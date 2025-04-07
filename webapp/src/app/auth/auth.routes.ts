@@ -9,10 +9,10 @@ export const routes: Routes = [
     component: AuthComponent,
     children: [
       {
-        path: 'signin', component: SigninComponent
+        path: 'signin', component: SigninComponent, title: 'QuanPay | Connexion'
       },
       {
-        path: 'register', component: RegisterComponent
+        path: 'register', component: RegisterComponent, title: 'QuanPay | Inscription'
       },
     ],
   }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../../auth/service/auth.service';
+import { UsersService } from '../../../core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,21 @@ import { AuthService } from '../../../auth/service/auth.service';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(private authService: AuthService) { }
+  currentUser: any;
+  isLogged: boolean = false;
+  isUser: boolean = false;
+  isAdmin: boolean = false;
+
+  constructor(
+    private userService: UsersService,
+    private authService: AuthService
+  ) {
+    this.userService.currentUser().subscribe((user: any) => {
+      this.currentUser = user;
+      console.log(this.currentUser);
+    });
+    const token = this.authService.getCookie('YXV0aGVudGljYXRlZCI6dHJ1Z');
+  }
 
   // Logout
   logout() {
