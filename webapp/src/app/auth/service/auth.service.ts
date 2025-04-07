@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { tap, delay, catchError } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 
@@ -24,12 +24,13 @@ export class AuthService {
     .pipe(
       catchError((error: any) => {
         console.error('Login failed:', error);
-        throw error;
+        return throwError(() => error);;
       })
     );;
   }
+
   signUp(userData: any) {
-    return this.http.post(`${this.API_URL}/register`, userData, {headers: environment.headers} );
+    return this.http.post(`${this.API_URL}/signup`, userData, {headers: environment.headers} );
   }
 
   currentUser() {
@@ -50,7 +51,7 @@ export class AuthService {
   logout(): void {
     localStorage.clear();
     sessionStorage.clear();
-    this.isLoggedIn = false;  
+    this.isLoggedIn = false;
     this.router.navigateByUrl('/auth/signin');
   }
 }

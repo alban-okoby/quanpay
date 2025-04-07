@@ -9,6 +9,7 @@ import { AuthService } from '../service/auth.service';
 import { LoginRequest } from '../models/login.request';
 import { Routes } from '../../core/routes/routes';
 import { SharedModule } from '../../shared/shared.module';
+import { NotificationService } from '../../core';
 
 @Component({
   selector: 'app-signin',
@@ -37,6 +38,7 @@ export class SigninComponent {
     private auth: AuthService,
     private router: Router,
     private formBuilder: UntypedFormBuilder,
+    private notificationService: NotificationService
     // private readonly commonService: CommonService,
   ) {}
 
@@ -69,65 +71,63 @@ export class SigninComponent {
       : '';
   }
   onSubmit() {
-      this.isRequesting = true;
-      this.auth.signIn(this.loginModel).subscribe(
-        (res: any) => {
-          // if (res.status != 400 || 500) {
-            // @ts-ignore
-            // localStorage.token = res.token;
-            const userRoles = res.user.roles[0];
-
-            localStorage.setItem('userRoles', userRoles);
-            localStorage.setItem('token', res.accessToken);
-
-            const rolesName = res.user.roles.map((role: any) => role.name);
-            const rolesId = res.user.roles.map((role: any) => role.id);
-            localStorage.setItem('qsdfghjklmpoiuytreza', userRoles);
-
-            const array1 = Math.floor(Math.random() * 999999999999999);
-            const array2 = Math.floor(Math.random() * 999999999999999);
-
-            localStorage.setItem('wxcvbnmlkjhgfdsqazertyuiop', array1 + rolesId + array2);
-            localStorage.setItem('response', res.status);
-            this.isLoggedIn = true;
-            localStorage.setItem('fuckYou', 'true');
-
-            //success msg
+    this.isRequesting = true;
+    this.auth.signIn(this.loginModel).subscribe({
+      next: (res: any) => {
+        const userRoles = res.user.roles[0];
+  
+        // Stockage des informations dans le localStorage
+        localStorage.setItem('userRoles', userRoles);
+        localStorage.setItem('token', res.accessToken);
+        const rolesName = res.user.roles.map((role: any) => role.name);
+        const rolesId = res.user.roles.map((role: any) => role.id);
+        localStorage.setItem('qsdfghjklmpoiuytreza', userRoles);
+        const array1 = Math.floor(Math.random() * 999999999999999);
+        const array2 = Math.floor(Math.random() * 999999999999999);
+        localStorage.setItem('wxcvbnmlkjhgfdsqazertyuiop', array1 + rolesId + array2);
+        localStorage.setItem('response', res.status);
+        this.isLoggedIn = true;
+        localStorage.setItem('fuckYou', 'true');
+  
+        // Success message
+        setTimeout(() => {
+          if (res.user.email != null && userRoles == 'ROLE_ADMIN') {
+            this.router.navigateByUrl('/');
+            this.showSuccessMessage(res.user.displayName);
             setTimeout(() => {
-              if (res.user.email != null && userRoles == 'ROLE_ADMIN') {
-                this.router.navigateByUrl('/');
-                this.showSuccessMessage(res.user.displayName);
-                setTimeout(() => {
-                  window.location.reload();
-                }, 1500)
-              }
-              // Many userTypes ? Not yet definded
-              if (res.user.email != null && ( userRoles == 'ROLE_USER' || userRoles == 'ROLE_HEAD')) {
-                this.router.navigateByUrl('/');
-                setTimeout(() => {
-                  window.location.reload();
-                }, 1500)
-                this.showSuccessMessage(res.user.displayName);
-              }
-              // For user want to try solutions before buy
-              else {
-                this.router.navigateByUrl('/preview');
-              }
-          }, 3100)
-        },
-        (err: any) => {
-          // Error msg
-          setTimeout(() => {
-            this.isRequesting = false;
-            this.showErorMessage();
+              window.location.reload();
+            }, 1500);
+          }
+          if (res.user.email != null && (userRoles == 'ROLE_USER' || userRoles == 'ROLE_HEAD')) {
+            this.router.navigateByUrl('/');
             setTimeout(() => {
-              // this.commonService.playErrorNotificationAudio();
-            }, 300)
-            // this.badCredentials();
-          }, 1100)
-        }
-      );
+              window.location.reload();
+            }, 1500);
+            this.showSuccessMessage(res.user.displayName);
+          }
+          else {
+            this.router.navigateByUrl('/preview');
+          }
+        }, 3100);
+      }, 
+      error: (err: any) => {
+        setTimeout(() => {
+          this.isRequesting = false;
+          if (err && err.error && err.error.message) {
+            if (err.error.message.toLowerCase().includes("disabled")) {
+              this.notificationService.showErrorMessage("Vous devez confirmer votre messagerie avant de pouvoir vous connecter");
+            } else {
+              this.notificationService.showErrorMessage(err.error.message); 
+            }
+          } else {
+            this.notificationService.showErrorMessage("Désolé, le service est temporairement hors ligne. Veuillez essayer plus tard.");
+          }
+          console.log(err);
+        }, 1100);
+      }
+    });
   }
+  
 
     /**
    * badCredentials : Message en cas d'identifiants incorrects
