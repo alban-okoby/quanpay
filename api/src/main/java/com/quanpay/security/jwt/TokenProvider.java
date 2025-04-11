@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.quanpay.config.AppProperties;
-import com.quanpay.dto.response.LocalUser;
+import com.quanpay.dto.LocalUser;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;

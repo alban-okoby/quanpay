@@ -1,6 +1,5 @@
 package com.quanpay.dto;
 
-import com.quanpay.dto.response.UserDTO;
 import lombok.Data;
 
 import java.util.Date;

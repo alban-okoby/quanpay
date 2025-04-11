@@ -2,7 +2,7 @@ package com.quanpay.security.oauth2.user;
 
 import java.util.Map;
 
-import com.quanpay.dto.response.SocialProvider;
+import com.quanpay.dto.SocialProvider;
 import com.quanpay.exception.OAuth2AuthenticationProcessingException;
 
 public class OAuth2UserInfoFactory {

@@ -1,4 +1,4 @@
-package com.quanpay.dto.response;
+package com.quanpay.dto;
 
 import com.quanpay.model.Role;
 import lombok.Data;

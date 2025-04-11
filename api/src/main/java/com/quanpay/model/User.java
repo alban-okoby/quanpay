@@ -2,7 +2,6 @@ package com.quanpay.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -60,9 +59,6 @@ public class User implements Serializable {
 	@ManyToMany
 	@JoinTable(name = "user_role", joinColumns = {@JoinColumn(name = "USER_ID")}, inverseJoinColumns = {@JoinColumn(name = "ROLE_ID")})
 	private Set<Role> roles;
-
-	@OneToMany(mappedBy = "user")
-	private Set<Account> accounts = new HashSet<>();
 
 	@OneToMany(mappedBy = "user")
 	private Set<GRepository> repositories;

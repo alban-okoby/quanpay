@@ -1,4 +1,4 @@
-package com.quanpay.dto.request;
+package com.quanpay.dto;
 
 import javax.validation.constraints.NotBlank;
 

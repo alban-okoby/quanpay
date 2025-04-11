@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.quanpay.dto.response.LocalUser;
+import com.quanpay.dto.LocalUser;
 import com.quanpay.exception.ResourceNotFoundException;
 import com.quanpay.model.User;
 import com.quanpay.util.GeneralUtils;

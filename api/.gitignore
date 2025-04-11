@@ -7,10 +7,6 @@
 # Only exists if Bazel was run
 /bazel-out
 
-src/main/resources/application-mysql.properties
-**/resources/**-mysql.properties
-src/main/resources/application-postgres.properties
-/src/main/resources/**-postgres.properties
 # dependencies
 /node_modules
 /node_modules - Copy

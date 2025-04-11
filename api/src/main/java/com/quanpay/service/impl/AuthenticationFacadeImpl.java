@@ -1,7 +1,6 @@
-package com.quanpay.service.impl;
+package com.osistechnologies.auth.service.Impl;
 
-
-import com.quanpay.service.AuthenticationFacade;
+import com.osistechnologies.auth.service.AuthenticationFacade;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

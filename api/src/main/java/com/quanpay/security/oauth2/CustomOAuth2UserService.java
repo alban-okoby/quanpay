@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 
-import com.quanpay.dto.response.SocialProvider;
+import com.quanpay.dto.SocialProvider;
 import com.quanpay.exception.OAuth2AuthenticationProcessingException;
 import com.quanpay.service.UserService;
 

@@ -1,9 +1,8 @@
-package com.quanpay.dto.request;
+package com.quanpay.dto;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-import com.quanpay.dto.response.SocialProvider;
 import com.quanpay.validator.PasswordMatches;
 
 import lombok.AllArgsConstructor;
@@ -27,7 +26,7 @@ public class SignUpRequest {
 	private String email;
 
 	@NotEmpty
-//	@UniqueElements
+	@UniqueElements
 	private String username;
 	private String about;
 

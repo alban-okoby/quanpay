@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.quanpay.config.AppProperties;
-import com.quanpay.dto.response.LocalUser;
+import com.quanpay.dto.LocalUser;
 import com.quanpay.exception.BadRequestException;
 import com.quanpay.security.jwt.TokenProvider;
 import com.quanpay.util.CookieUtils;

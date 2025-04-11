@@ -6,7 +6,7 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.test.context.support.WithSecurityContextFactory;
 
-import com.quanpay.dto.response.LocalUser;
+import com.quanpay.dto.LocalUser;
 import com.quanpay.model.User;
 
 public class WithMockCustomUserSecurityContextFactory implements WithSecurityContextFactory<WithMockCustomUser> {

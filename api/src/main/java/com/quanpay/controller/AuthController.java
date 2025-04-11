@@ -8,7 +8,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 
 import com.quanpay.model.VerificationToken;
-import com.quanpay.repository.VerificationTokenRepository;
+import com.quanpay.repo.VerificationTokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,17 +17,16 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import com.quanpay.config.AppConstants;
 import com.quanpay.config.CurrentUser;
-import com.quanpay.dto.response.ApiResponse;
-import com.quanpay.dto.response.JwtAuthenticationResponse;
-import com.quanpay.dto.response.LocalUser;
-import com.quanpay.dto.request.LoginRequest;
-import com.quanpay.dto.request.SignUpRequest;
-import com.quanpay.dto.response.SignUpResponse;
+import com.quanpay.dto.ApiResponse;
+import com.quanpay.dto.JwtAuthenticationResponse;
+import com.quanpay.dto.LocalUser;
+import com.quanpay.dto.LoginRequest;
+import com.quanpay.dto.SignUpRequest;
+import com.quanpay.dto.SignUpResponse;
 import com.quanpay.exception.UserAlreadyExistAuthenticationException;
 import com.quanpay.model.User;
 import com.quanpay.security.jwt.TokenProvider;
@@ -41,8 +40,6 @@ import dev.samstevens.totp.qr.QrData;
 import dev.samstevens.totp.qr.QrDataFactory;
 import dev.samstevens.totp.qr.QrGenerator;
 import lombok.extern.slf4j.Slf4j;
-import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.context.IContext;
 
 @Slf4j
 @RestController
@@ -72,8 +69,6 @@ public class AuthController {
 
 	@Autowired
 	MailService mailService;
-	@Autowired
-	private TemplateEngine templateEngine;
 
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -119,7 +114,7 @@ public class AuthController {
 	}
 
 	@PostMapping("/verify")
-	@PreAuthorize("hasRole('USER')")
+	@PreAuthorize("hasRole('PRE_VERIFICATION_USER')")
 	public ResponseEntity<?> verifyCode(@NotEmpty @RequestBody String code, @CurrentUser LocalUser user) {
 		if (!verifier.isValidCode(user.getUser().getSecret(), code)) {
 			return new ResponseEntity<>(new ApiResponse(false, "Invalid Code!"), HttpStatus.BAD_REQUEST);
@@ -131,9 +126,10 @@ public class AuthController {
 	@GetMapping("/token/verify")
 	public ResponseEntity<?> confirmRegistration(@NotEmpty @RequestParam String token) {
 		VerificationToken tokenValue = this.verificationTokenRepository.findByToken(token);
+
 		if (tokenValue != null) {
 			userService.validateVerificationToken(token);
-			String buttonUrl =String.format("<a href=\"localhost:3000/auth/signin\" class=\"confirmation-button\">");
+			String buttonUrl =String.format("<a href=\"localhost:4200/auth/signin\" class=\"confirmation-button\">");
 			return ResponseEntity.ok().body("Votre compte QuanPay à été activé avec succès ✅, vous pouvez dès à présent vous connecter." + buttonUrl);
 		}
 		else {
