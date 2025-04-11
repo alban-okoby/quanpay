@@ -9,6 +9,7 @@ import { MycardsComponent } from './pages/mycards/mycards.component';
 import { PersonnalFinancesComponent } from './pages/personnal-finances/personnal-finances.component';
 import { Routes  as StaticRoute }  from './core/routes/routes';
 import { MyprofileComponent } from './pages/myprofile/myprofile.component';
+import { SendMoneyComponent } from './pages/send-money/send-money.component';
 
 const staticRoutes : StaticRoute = new StaticRoute();
 export const routes: Routes = [
@@ -22,6 +23,9 @@ export const routes: Routes = [
       },
       {
         path: staticRoutes.MY_ACCOUNTS, component: AccountComponent,
+      },
+      {
+        path: staticRoutes.MY_ACCOUNTS_SEND_MONEY, component: SendMoneyComponent, title: 'QuanPay | Send Money'
       },
       {
         path: staticRoutes.MY_ASSURANCES, component: MyassurancesComponent,

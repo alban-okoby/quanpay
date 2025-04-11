@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgOtpInputComponent, NgOtpInputModule } from 'ng-otp-input';
 import { CountDownComponent } from "../count-down/count-down.component";
@@ -21,12 +21,21 @@ export class SendMoneyOtpComponent implements OnInit {
       length: 6,
       isPasswordInput: false,
       placeholder: '',
-      inputStyles: {
-        width: '50px',
-        height: '50px',
+      inputStyles: {},
+    }
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+      this.setResponsiveInputStyles(event.target.innerWidth);
+    }
+
+    setResponsiveInputStyles(width: number) {
+      const isMobile = width < 600;
+      this.config.inputStyles = {
+        width: isMobile ? '35px' : '50px',
+        height: isMobile ? '35px': '50px',
         backgroundColor: '#F6F7F8',
         color: '#333',
-      },
+      };
     }
 
     ngOnInit() {
@@ -34,6 +43,7 @@ export class SendMoneyOtpComponent implements OnInit {
         code: this.ngOtpInput
       }
     }
+
     validateSendingMoney() {
       console.log(this.otpData);
     }

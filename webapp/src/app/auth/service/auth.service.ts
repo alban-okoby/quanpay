@@ -34,8 +34,11 @@ export class AuthService {
     return this.http.post(`${this.API_URL}/signup`, userData);
   }
 
- 
-
+  /**
+   * Verify a token
+   * @param token The token to verify
+   * @returns An Observable containing the result of the verification
+   */
   verifyToken(token: any): Observable<any> {
     return this.http.post(`${this.API_URL}/token/verify`, token);
   }

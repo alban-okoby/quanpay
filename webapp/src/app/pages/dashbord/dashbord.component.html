@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-8 mt-5">
+  <div class="col-lg-8 mt-3">
     <app-dash-main></app-dash-main>
   </div>
   <div class="col-lg-4" style="margin-top: -1.5rem; padding: .55rem;">
@@ -24,7 +24,7 @@
 
       <div class="card-actions row p-4">
         <div class="action col-lg-4">
-          <div class="card-bordered">
+          <div class="card-bordered" [routerLink]="routes.MY_ACCOUNTS_SEND_MONEY">
             <img src="assets/img/card_action1.png" />
             <h5>Transferer de l'argent</h5>
           </div>
@@ -74,7 +74,7 @@
               <div class="transaction-date text-info">28 January 2021</div>
             </div>
           </div>
-          <div class="transaction-amount negative">- $ 850</div>
+          <div class="transaction-amount negative">- 850 XOF</div>
         </div>
         <div class="transaction-item">
           <div class="transaction-details">
@@ -86,7 +86,7 @@
               <div class="transaction-date text-info">25 January 2021</div>
             </div>
           </div>
-          <div class="transaction-amount positive">+ $ 2 500</div>
+          <div class="transaction-amount positive">+ 2 500 XOF</div>
         </div>
         <div class="transaction-item">
           <div class="transaction-details">
@@ -98,7 +98,7 @@
               <div class="transaction-date text-info">21 January 2021</div>
             </div>
           </div>
-          <div class="transaction-amount text-success">- $ 400</div>
+          <div class="transaction-amount text-success">+ 400 XOF</div>
         </div>
         <div class="transaction-item">
           <div class="transaction-details">
@@ -110,7 +110,7 @@
               <div class="transaction-date text-info">20 January 2021</div>
             </div>
           </div>
-          <div class="transaction-amount text-danger">- $ 150</div>
+          <div class="transaction-amount text-danger">- 150 XOF</div>
         </div>
       </div>
       <!-- End transactions history -->

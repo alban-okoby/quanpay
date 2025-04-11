@@ -31,5 +31,12 @@
   .otp {
     margin-left: 3rem;
   }
+
+  @media screen and (max-width: 600px) {
+    .otp {
+      align-self: center;
+      margin-left: -1.3rem;
+    }
+  }
 }
 

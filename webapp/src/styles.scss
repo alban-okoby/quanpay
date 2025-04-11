@@ -52,6 +52,9 @@ body.swal2-shown .swal2-backdrop {
   text-align: center;
   align-self: center;
 }
+.pointer {
+  cursor: pointer;
+}
 
 /* Start Solde Compte Card */
 .principal_account {
@@ -161,16 +164,16 @@ body.swal2-shown .swal2-backdrop {
   padding: 0.65rem;
   width: 100%;
   height: 210px;
-  background: url(../public/assets/img/card_frame.png) #c6183d;
+  background: url(../public/assets/img/card_frame.png) #92384b;
   color: #fff;
   border-radius: 15px;
   margin-right: .5rem;
 
   .carte-type {
     text-align: right;
-    font-weight: 700;
+    font-weight: 500;
     margin-right: 5rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: -0.2rem;
   }
   .carte-level {
@@ -190,7 +193,7 @@ body.swal2-shown .swal2-backdrop {
     margin-top: 8rem;
     .value {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
   .carte-cvv {

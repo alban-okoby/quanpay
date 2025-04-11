@@ -13,7 +13,7 @@ export class Routes {
   DASHBOARD: string = `${this.basePath}`;
   BUSINESS: string = `business`;
   MY_ACCOUNTS: string = `myaccounts`;
-  MY_ACCOUNTS_SEND_MONEY: string = `${this.BUSINESS}/myaccounts/send-money}`;
+  MY_ACCOUNTS_SEND_MONEY: string = `${this.BUSINESS}/${this.MY_ACCOUNTS}/send-money`;
   MY_ASSURANCES: string = `${this.BUSINESS}/myassurances`
   MY_CARDS: string = `${this.BUSINESS}/mycards`;
   MY_FINANCES: string = `${this.BUSINESS}/finances`
