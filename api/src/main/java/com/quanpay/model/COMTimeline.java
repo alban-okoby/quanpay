@@ -1,7 +1,6 @@
-package com.osistechnologies.common.entity;
+package com.quanpay.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.osistechnologies.common.utils.UUIDGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,14 +11,12 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.UUID;
 
 
 /**
- * (Pas très obligatoire car : Possible de déninir directement les champs dans les classes utilisatrices),
- * mais peut être intéressante à implémenter
- * Intéressante au niveau retraçage de toutes les actions sur les objects du système
+ * Retraçage de toutes les actions critiques sur les objects du système
  *
- * Utilisez cette classe presque toujours en association sur les actions où l'utilisateur efféctue une action surtout critique
  */
 @Data
 @NoArgsConstructor @AllArgsConstructor
@@ -28,7 +25,7 @@ import java.util.Objects;
 @JsonIgnoreProperties
 public class COMTimeline implements Serializable {
     @Id
-    private final String id = new UUIDGenerator().customIDGenerator();
+    private final String id = UUID.randomUUID().toString();
     private LocalDateTime submittedOnDate;
     private String submittedByUsername;
     private String submittedByFirstname;
@@ -59,13 +56,8 @@ public class COMTimeline implements Serializable {
     private String deletedByFirstname;
     private String deletedByLastname;
 
-    private LocalDateTime archivedOnDate;
-    private String archivedByUsername;
-    private String archivedFirstname;
-    private String archivedLastname;
 
     private LocalDateTime transactionDate;
-    private LocalDateTime actualDisbursementDate;
 
     @Override
     public boolean equals(Object o) {

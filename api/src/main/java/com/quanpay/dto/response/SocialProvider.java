@@ -1,4 +1,4 @@
-package com.quanpay.dto;
+package com.quanpay.dto.response;
 
 public enum SocialProvider {
 

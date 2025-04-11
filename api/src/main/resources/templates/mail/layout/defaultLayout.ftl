@@ -1,15 +1,20 @@
 <#macro myLayout>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <!DOCTYPE html>
+    <html lang="fr">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
             body {
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 margin: 0;
                 padding: 0;
+            }
+            @media screen and (max-width: 768px){
+                body {
+                    width: 80%;
+                }
             }
 
             .card {
@@ -32,45 +37,21 @@
                 flex: 1 1 auto;
                 padding: .25rem 1.25rem;
                 margin-bottom: 0;
-                background-color: #222; /* Or  */
+                background-color: #C6183D; /* Or  */
                 border-bottom: 1px solid rgba(0, 0, 0, .125);
                 color: #fff;
-            }
-
-            .media {
-                display: flex;
-                align-items: flex-start;
-            }
-
-            .media-body {
-                flex: 1;
-            }
-
-            .rounded-circle {
-                border-radius: 50% !important;
-            }
-
-            .pagelink-dark {
-                cursor: pointer;
-                color: #343a40 !important;
-                text-decoration: none;
-            }
-
-            .pagelink-dark:hover {
-                text-shadow: 1px 1px 2px #343a40;
-                text-decoration: none;
             }
             .confirmation-button {
                 display: inline-block;
                 padding: 10px 20px;
-                background-color: #19a754; /* Gren */
+                background-color: #C6183D; /* Principal */
                 color: #fff !important;
                 text-decoration: none;
                 border-radius: 4px;
             }
 
             .confirmation-button:hover {
-                background-color: #198754; /* Green on hover */
+                background-color: #D6183D; /* Principal on hover */
                 color: white !important;
             }
         </style>
@@ -93,7 +74,7 @@
                     </div>
                 </div>
                 <p style="margin-top: 5px">
-                    If you haven't made a request, simply ignore this message.
+                    Si vous n'avez pas fait de demande, ignorez ce message simplement.
                 </p>
             </td>
         </tr>

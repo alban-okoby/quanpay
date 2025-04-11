@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import com.quanpay.dto.LocalUser;
-import com.quanpay.dto.SocialProvider;
-import com.quanpay.dto.UserInfo;
+import com.quanpay.dto.response.LocalUser;
+import com.quanpay.dto.response.SocialProvider;
+import com.quanpay.dto.response.UserInfo;
 import com.quanpay.model.Role;
 import com.quanpay.model.User;
 

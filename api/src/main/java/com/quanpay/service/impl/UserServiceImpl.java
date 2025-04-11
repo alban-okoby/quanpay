@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-import com.quanpay.dto.UserInfo;
+import com.quanpay.dto.response.UserInfo;
 import com.quanpay.service.MailService;
 import com.quanpay.service.UserService;
 import org.apache.commons.lang3.StringUtils;
@@ -19,17 +19,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.quanpay.config.AppConstants;
-import com.quanpay.dto.LocalUser;
-import com.quanpay.dto.SignUpRequest;
-import com.quanpay.dto.SocialProvider;
+import com.quanpay.dto.response.LocalUser;
+import com.quanpay.dto.request.SignUpRequest;
+import com.quanpay.dto.response.SocialProvider;
 import com.quanpay.exception.OAuth2AuthenticationProcessingException;
 import com.quanpay.exception.UserAlreadyExistAuthenticationException;
 import com.quanpay.model.Role;
 import com.quanpay.model.User;
 import com.quanpay.model.VerificationToken;
-import com.quanpay.repo.RoleRepository;
-import com.quanpay.repo.UserRepository;
-import com.quanpay.repo.VerificationTokenRepository;
+import com.quanpay.repository.RoleRepository;
+import com.quanpay.repository.UserRepository;
+import com.quanpay.repository.VerificationTokenRepository;
 import com.quanpay.security.oauth2.user.OAuth2UserInfo;
 import com.quanpay.security.oauth2.user.OAuth2UserInfoFactory;
 import com.quanpay.util.GeneralUtils;
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private RoleRepository roleRepository;
 
@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	MailService mailService;
-	
+
 	@Override
 	@Transactional(value = "transactionManager")
 	public User registerNewUser(final SignUpRequest signUpRequest) throws UserAlreadyExistAuthenticationException {
@@ -68,8 +68,9 @@ public class UserServiceImpl implements UserService {
 		User user = buildUser(signUpRequest);
 		Date now = Calendar.getInstance().getTime();
 		user.setCreatedDate(now);
-		user.setModifiedDate(now);
+		user.setModifiedDate(null);
 		user.setAbout(signUpRequest.getAbout());
+		user.setEnabled(0);
 		user = userRepository.save(user);
 		userRepository.flush();
 		return user;

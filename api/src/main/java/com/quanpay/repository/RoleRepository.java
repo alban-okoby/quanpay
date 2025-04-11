@@ -1,4 +1,4 @@
-package com.quanpay.repo;
+package com.quanpay.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.osistechnologies.auth.service;
+package com.quanpay.service;
 
 import org.springframework.security.core.Authentication;
 

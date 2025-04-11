@@ -1,5 +1,6 @@
-package com.quanpay.dto;
+package com.quanpay.dto.response;
 
+import com.quanpay.dto.response.UserInfo;
 import lombok.Value;
 
 @Value

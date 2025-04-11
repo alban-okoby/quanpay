@@ -53,10 +53,10 @@ public class MailServiceImpl implements MailService {
 		final String confirmationUrl = appProperties.getClient().getBaseUrl() + "api/v1/auth/token/verify?token=" + token;
 		buttonUrl =String.format("<div style=\"text-align: center; margin-top: 20px; margin-bottom: 5px; color: white;\">" +
 				"<a href=\"%sapi/v1/auth/token/verify?token=%s\" class=\"confirmation-button\">" +
-				"Finalize my registration</a>" +
+				"Finaliser mon inscription</a>" +
 				"</div>", appProperties.getClient().getBaseUrl(), token);
 		final String message = messageService.getMessage("message.mail.verification");
-		sendHtmlEmail("Github Clone (GC) - Confirm my registration", message + LINE_BREAK + buttonUrl + LINE_BREAK + confirmationUrl, user);
+		sendHtmlEmail("QuanPay - Confirmer mon adresse mail", message + LINE_BREAK + buttonUrl + LINE_BREAK, user);
 	}
 
 	private String geFreeMarkerTemplateContent(Map<String, Object> model, String templateName) {

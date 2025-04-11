@@ -11,11 +11,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.quanpay.dto.SocialProvider;
+import com.quanpay.dto.response.SocialProvider;
 import com.quanpay.model.Role;
 import com.quanpay.model.User;
-import com.quanpay.repo.RoleRepository;
-import com.quanpay.repo.UserRepository;
+import com.quanpay.repository.RoleRepository;
+import com.quanpay.repository.UserRepository;
 
 @Component
 public class SetupDataLoader implements ApplicationListener<ContextRefreshedEvent> {

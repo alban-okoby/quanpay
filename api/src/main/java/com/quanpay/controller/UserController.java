@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.quanpay.config.CurrentUser;
-import com.quanpay.dto.LocalUser;
+import com.quanpay.dto.response.LocalUser;
 import com.quanpay.util.GeneralUtils;
 
 @RestController
-@RequestMapping(AppConstants.API_ROOT)
+@RequestMapping(AppConstants.API_ROOT+"/users")
 public class UserController {
 
-	@GetMapping("/user/me")
+	@GetMapping("/me")
 	@PreAuthorize("hasRole('USER')")
 	public ResponseEntity<?> getCurrentUser(@CurrentUser LocalUser user) {
 		return ResponseEntity.ok(GeneralUtils.buildUserInfo(user));
 	}
 
-	@GetMapping("/all")
+	@GetMapping()
 	public ResponseEntity<?> getContent() {
 		return ResponseEntity.ok("Public content goes here");
 	}

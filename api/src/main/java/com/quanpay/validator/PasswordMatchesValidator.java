@@ -3,7 +3,7 @@ package com.quanpay.validator;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.quanpay.dto.SignUpRequest;
+import com.quanpay.dto.request.SignUpRequest;
 
 public class PasswordMatchesValidator implements ConstraintValidator<PasswordMatches, SignUpRequest> {
 

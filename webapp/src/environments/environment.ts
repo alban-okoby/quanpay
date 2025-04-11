@@ -1,5 +1,4 @@
 import { HttpHeaders } from "@angular/common/http";
-import { AuthService } from "../app/auth/service/auth.service";
 
 export const environment = {
   production: false,

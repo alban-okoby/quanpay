@@ -3,12 +3,12 @@ package com.quanpay.service;
 import java.util.Map;
 import java.util.Optional;
 
-import com.quanpay.dto.UserInfo;
+import com.quanpay.dto.response.UserInfo;
 import org.springframework.security.oauth2.core.oidc.OidcIdToken;
 import org.springframework.security.oauth2.core.oidc.OidcUserInfo;
 
-import com.quanpay.dto.LocalUser;
-import com.quanpay.dto.SignUpRequest;
+import com.quanpay.dto.response.LocalUser;
+import com.quanpay.dto.request.SignUpRequest;
 import com.quanpay.exception.UserAlreadyExistAuthenticationException;
 import com.quanpay.model.User;
 
