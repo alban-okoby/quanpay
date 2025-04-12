@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
     "@swimlane/ngx-datatable": "^21.0.0-alpha.1",
+    "dotenv": "^16.5.0",
     "ng-otp-input": "^2.0.7",
     "ngx-otp-input": "^1.1.4",
     "quantech-pay": "file:",

@@ -8,7 +8,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 
 import com.quanpay.model.VerificationToken;
-import com.quanpay.repo.VerificationTokenRepository;
+import com.quanpay.repository.VerificationTokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -80,6 +80,7 @@ public class AuthController {
 		return ResponseEntity.ok(new JwtAuthenticationResponse(jwt, authenticated, authenticated ? GeneralUtils.buildUserInfo(localUser) : null));
 	}
 
+	@PreAuthorize("hasAnyRole('USER', 'ADMIN', 'MODERATOR')")
 	@GetMapping("/findUserByEmail")
 	public ResponseEntity<?> findUserByEmail(@RequestBody String email) {
 		User user = userService.findTheUserByEmail(email);
@@ -114,7 +115,7 @@ public class AuthController {
 	}
 
 	@PostMapping("/verify")
-	@PreAuthorize("hasRole('PRE_VERIFICATION_USER')")
+	@PreAuthorize("hasAnyRole('USER', 'ADMIN', 'MODERATOR')")
 	public ResponseEntity<?> verifyCode(@NotEmpty @RequestBody String code, @CurrentUser LocalUser user) {
 		if (!verifier.isValidCode(user.getUser().getSecret(), code)) {
 			return new ResponseEntity<>(new ApiResponse(false, "Invalid Code!"), HttpStatus.BAD_REQUEST);

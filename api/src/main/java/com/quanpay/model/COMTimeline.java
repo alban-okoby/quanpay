@@ -1,10 +1,10 @@
-package com.osistechnologies.common.entity;
+package com.quanpay.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.osistechnologies.common.utils.UUIDGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.id.UUIDGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -28,7 +28,7 @@ import java.util.Objects;
 @JsonIgnoreProperties
 public class COMTimeline implements Serializable {
     @Id
-    private final String id = new UUIDGenerator().customIDGenerator();
+    private final String id = new UUIDGenerator().toString();
     private LocalDateTime submittedOnDate;
     private String submittedByUsername;
     private String submittedByFirstname;
